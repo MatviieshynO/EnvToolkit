@@ -5,5 +5,5 @@
     "main": "src/main.js",
     "scripts": {},
     "author": "Oleh Matviieshyn <olopromotion@gmail.com>",
-    "license": "SEE LICENCE IN LICENCE"
+    "license": "BSD-3-Clause"
 }
