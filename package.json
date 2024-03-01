@@ -1,0 +1,9 @@
+{
+    "name": "env_toolkit",
+    "version": "1.0.0",
+    "description": "Loads environment variables from .env file",
+    "main": "src/main.js",
+    "scripts": {},
+    "author": "Oleh Matviieshyn <olopromotion@gmail.com>",
+    "license": "SEE LICENCE IN LICENCE"
+}
