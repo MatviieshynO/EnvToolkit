@@ -1,4 +1,4 @@
-const fs = require("node:fs");
+const fs = require("node:fs/promises");
 const path = require("node:path");
 
 // Asynchronous function to check if a file exists at the given file path
@@ -13,5 +13,23 @@ async function checkFileExists(filePath) {
     } catch (error) {
         // If an error occurs (e.g., file does not exist or permissions issue), return false
         return false;
+    }
+}
+
+// Asynchronous function to read the content of a file
+async function readFile(filePath) {
+    try {
+        // Use the 'fs' module's 'readFile' function to read the content of the file
+        // 'await' is used to wait for the asynchronous operation to complete
+        const content = await fs.readFile(filePath, "utf8");
+
+        // If successful, return the content of the file
+        return content;
+    } catch (error) {
+        // If an error occurs during file reading, log an error message to the console
+        console.error(`Error reading file: ${error.message}`);
+
+        // Re-throw the error to propagate it further up the call stack
+        throw error;
     }
 }
