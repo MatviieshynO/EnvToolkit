@@ -9,5 +9,12 @@
         "url": "git@github.com:MatviieshynO/EnvToolkit.git"
     },
     "author": "Oleh Matviieshyn <olopromotion@gmail.com>",
-    "license": "BSD-3-Clause"
+    "readmeFilename": "README.md",
+    "license": "BSD-3-Clause",
+    "engines": {
+        "node": ">=18.17.1"
+    },
+    "browser": {
+        "fs": false
+    }
 }
