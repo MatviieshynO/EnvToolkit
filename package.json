@@ -4,6 +4,10 @@
     "description": "Loads environment variables from .env file",
     "main": "src/main.js",
     "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:MatviieshynO/EnvToolkit.git"
+    },
     "author": "Oleh Matviieshyn <olopromotion@gmail.com>",
     "license": "BSD-3-Clause"
 }
