@@ -33,3 +33,18 @@ async function readFile(filePath) {
         throw error;
     }
 }
+
+// Asynchronous function to create a file with specified content at the given file path
+async function createFile(filePath, content) {
+    try {
+        // Using fs.writeFile to write content to the file at the specified path
+        await fs.writeFile(filePath, content, "utf8");
+
+        // Logging a success message to the console if the file creation is successful
+        console.log(`File created: ${filePath}`);
+    } catch (error) {
+        // Handling errors: logging an error message to the console and rethrowing the error
+        console.error(`Error creating file: ${error.message}`);
+        throw error;
+    }
+}
