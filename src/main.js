@@ -8,8 +8,7 @@ async function checkFileExists(filePath) {
     try {
         // Attempt to access the file using fs.promises.access() with F_OK flag
         // This checks if the file exists and is visible to the calling process
-        await fs.promises.access(filePath, fs.constants.F_OK); // undefined or error
-
+        const exist = await fs.access(filePath, fs.constants.F_OK); // undefined or error
         // If the access attempt is successful, return true indicating the file exists
         return true;
     } catch (error) {
@@ -53,11 +52,11 @@ async function createFile(filePath, content) {
 
 // This function parses the content of a string 'src' representing key-value pairs,
 // extracting each pair and returning them as an object.
-function parseToObj(src) {
+function parseToObj(filePath) {
     const obj = {};
 
     // Convert buffer to string
-    let lines = src.toString();
+    let lines = filePath.toString();
 
     // Normalize line breaks
     lines = lines.replace(/\r\n?/gm, "\n");
@@ -93,3 +92,4 @@ function parseToObj(src) {
     // Return the object with parsed data
     return obj;
 }
+console.log(process.env);
